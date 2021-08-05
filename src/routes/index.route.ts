@@ -4,7 +4,7 @@ import pingRouter from './ping.route';
 
 const router = express.Router();
 
-router.use('/test', pingRouter)
+router.use(pingRouter)
 
 
 
