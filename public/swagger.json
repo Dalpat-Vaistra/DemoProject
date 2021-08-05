@@ -31,7 +31,7 @@
 	},
 	"openapi": "3.0.0",
 	"paths": {
-		"/Ping": {
+		"/ping": {
 			"get": {
 				"operationId": "GetMessage",
 				"responses": {
