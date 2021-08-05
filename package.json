@@ -8,7 +8,7 @@
     "predev": "npm run swagger",
     "prebuild": "npm run swagger",
     "build": "tsc",
-    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
+    "dev": "ts-node src/index.ts",
     "swagger": "tsoa spec"
   },
   "keywords": [],
