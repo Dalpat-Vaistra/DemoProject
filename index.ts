@@ -1,7 +1,8 @@
 import express, {Request, Response} from 'express';
 import morgan from 'morgan';
+import swaggerUi from "swagger-ui-express";
 
-import router from './routes/index.route'
+import router from './src/routes/index.route'
 
 const port = 3030;
 
@@ -14,6 +15,16 @@ app.get('/', (req: Request, res: Response) => {
     res.send("Welcome to Git Testing App !!")
 });
 
+app.use(
+    "/docs",
+    swaggerUi.serve,
+    swaggerUi.setup(undefined, {
+      swaggerOptions: {
+        url: "/swagger.json",
+      },
+    })
+  ); 
+  
 app.use(router);
 
 app.listen(port, () => {
